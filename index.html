@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIvidea Studio</title>
+<style>
+:root { --bg: #ffffff; --fg: #1b1d22; --muted: #5d6470; --line: #e3e5ea; }
+@media (prefers-color-scheme: dark) { :root { --bg: #111317; --fg: #e8e9ec; --muted: #9aa1ad; --line: #2a2e36; } }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px; }
+h1 { font-size: 28px; margin-bottom: 4px; } p.sub { color: var(--muted); margin-top: 0; }
+h2 { font-size: 18px; margin-top: 28px; border-top: 1px solid var(--line); padding-top: 20px; }
+a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+<h1>AIvidea Studio</h1>
+<p class="sub">Private publishing tool for the owner's own YouTube channels.</p>
+
+<h2>What it is</h2>
+<p>AIvidea Studio is a desktop tool run by one person on their own computer. It
+edits short videos and publishes them to YouTube channels that the same person
+owns and manages. It is not offered to other users and has no public sign-up.</p>
+
+<h2>How it uses YouTube API Services</h2>
+<ul>
+<li><b>Upload:</b> uploads finished Shorts to the owner's channels with
+<code>videos.insert</code>, sets title, description, tags and a scheduled
+publish time, and sets a custom thumbnail with <code>thumbnails.set</code>.</li>
+<li><b>Statistics:</b> reads view, like and comment counts of the owner's own
+videos and the subscriber count of the owner's own channels
+(<code>videos.list</code>, <code>channels.list</code>) to show them on a
+private, local dashboard.</li>
+</ul>
+<p>The tool does not read, store or process data of any other YouTube user,
+and it does not like, comment, subscribe or otherwise interact with videos.</p>
+
+<h2>Authorization</h2>
+<p>Each channel is connected once through Google OAuth by the channel owner.
+Access tokens are stored only on the owner's computer and can be revoked at any
+time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+
+<p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
+</main>
+</body>
+</html>
